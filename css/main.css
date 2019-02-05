@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500,700');
+
+:root {
+    --theme-color: #FEBE4F;
+    --theme-alt: #2F2F2F;
+}
+
+::selection {
+    background: var(--theme-color);
+    /* WebKit/Blink Browsers */
+}
+body::-webkit-scrollbar {
+    width: .2rem;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: var(--theme-alt);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: var(--theme-color);
+  outline: 1px solid var(--theme-color);
+  border-radius: 15px;
+}
+
+::-moz-selection {
+    background: var(--theme-color);
+}
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif !important;
+}
+body{
+    color: var(--theme-alt);
+    font-family: 'Quicksand', sans-serif !important;
+}
+
+
+/* General */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: 700;
+}
+
+p,a{
+    font-weight: 500;
+}
+h1 {
+    font-size: 1.9rem;
+}
+
+h2 {
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.3rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6,
+a ,p{
+    font-size: 1.1em;
+}
+a{
+    transition: all 0.3s ease-in-out;
+    color: var(--theme-alt);
+    border-bottom: 5px solid var(--theme-color);
+    /* border-bottom: 1px solid var(--theme-alt); */
+    padding-bottom: 2px;
+    text-decoration: none;
+    width: fit-content;
+}
+a:hover{
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.buttons{
+    margin: 0 auto;
+    display: flex
+}
+.btn{
+    border-radius: 0;
+    width: fit-content;
+}
+.btn-theme{
+    background-color: var(--theme-color);
+    text-decoration: none;
+    padding: 5px 10px !important;
+}
+.card{
+    border-radius: 0;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+}
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 70px;
+}
+.row{
+    margin-left: 0;
+    margin-right: 0;
+}
+.underline{
+    border-bottom: 5px solid var(--theme-color);
+}
+section{
+    padding: 80px 3%;
+}
+section header h4{
+    width: fit-content;
+    padding: 5px;
+    text-transform: uppercase;
+    color: var(--theme-alt);
+    background-color: var(--theme-color);
+}
+
+
+/* Nav Styles */
+header nav{
+    background-color: var(--theme-color);
+}
+.navbar{
+    padding: 0 3%;
+}
+.navbar-brand{
+    text-decoration: none !important;
+    border-bottom: 0;
+}
+.navbar-brand span{
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+}
+.navbar-nav li{
+    padding: 0 3px;
+}
+.nav-link{
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--theme-alt) !important;
+    text-transform: uppercase;
+    border-bottom: 0;
+}
+.nav-link.active {
+    color: var(--theme-color) !important;
+}
+
+
+/* Hero Styles */
+.hero{
+    background-image: url('../assets/images/herobg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    min-height: 500px;
+}
+.hero .featured-campaign{
+    background-color: white !important;
+}
+
+/* What we do */
+.what-we-do{
+    background-color: var(--theme-alt);
+}
+.what-we-do h2{
+    color: #FFFFFF;
+}
+.what-we-do>div{
+    padding-top: 60px;
+}
+.what-we-do div img{
+    margin-top: -50px;
+}
+
+/* Take Action */
+.take-action>div{
+    padding-top: 60px;
+}
+.take-action>div>.card>img{
+    width: 20% !important;
+}
+.take-action>div>.card>a::after{
+    transition: all 0.3s ease-in-out;
+    /* background-image: url('../assets/images/take-action/arrow.svg'); */
+    width: 100%;
+    content: '\2192';
+    padding-left: 4px;
+    color: var(--theme-alt);
+}
+.take-action>div>.card>a:hover::after{
+    padding-left: 10px;
+}
+.take-action>div>.card>span>a{
+    border-bottom: 0 !important;
+}
+
+/* Projects */
+.projects{
+    background: linear-gradient(90deg, rgba(47, 47, 47, 0.52) 0%, #2F2F2F 50%, #2F2F2F 50%);
+    z-index: 10 !important;
+    color: #FFFFFF;
+}
+.projects img{
+    z-index: 1 !important;
+    position: relative;
+}
+.projects a{
+    color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    h6 {
+        font-size: 0.9em;
+    }
+    section{
+        padding: 60px 5%;
+    }
+    .hero{
+        padding: 0 5%;
+        margin: 0 auto;
+        min-height: 300px
+    }
+}
